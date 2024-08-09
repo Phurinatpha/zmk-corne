@@ -18,37 +18,37 @@
 
         con1 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <37 40 6>;
+            key-positions = <6 38 39>;
         };
 
         con2 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <37 40 18>;
+            key-positions = <18 38 39>;
         };
 
         con3 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <37 40 30>;
+            key-positions = <30 38 39>;
         };
 
         dis1 {
             bindings = <&bt BT_DISC 0>;
-            key-positions = <37 40 5>;
+            key-positions = <5 38 39>;
         };
 
         dis2 {
             bindings = <&bt BT_DISC 1>;
-            key-positions = <37 40 17>;
+            key-positions = <17 38 39>;
         };
 
         dis3 {
             bindings = <&bt BT_DISC 2>;
-            key-positions = <37 40 29>;
+            key-positions = <29 38 39>;
         };
 
         soft-off {
             bindings = <&soft_off>;
-            key-positions = <37 40 0>;
+            key-positions = <0 38 39>;
         };
     };
 
