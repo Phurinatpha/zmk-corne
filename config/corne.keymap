@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 &soft_off {
-    hold-time-ms = <0>; // Only turn off it the key is held for 5 seconds or longer.
+    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
 / {
@@ -41,10 +41,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&mt ESC TAB  &trans  &trans    &kp UP    &trans     &trans       &kp F1     &kp F2   &kp F3    &kp F4   &kp F5   &kp BSPC
-&kp LCTRL    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans       &kp F6     &kp F7   &kp F8    &kp F9   &kp F10  &trans
-&kp LSHIFT   &trans  &trans    &trans    &trans     &trans       &kp F11    &kp F12  &kp F13   &kp F14  &kp F15  &kp RSHFT
-                               &kp LGUI  &trans     &kp SPACE    &kp ENTER  &trans   &kp RALT
+&mt ESC TAB  &bt BT_DISC 1  &bt BT_DISC 0  &kp UP    &bt BT_SEL 0  &bt BT_SEL 1    &kp F1     &kp F2   &kp F3    &kp F4   &kp F5   &kp BSPC
+&kp LCTRL    &trans         &kp LEFT       &kp DOWN  &kp RIGHT     &trans          &kp F6     &kp F7   &kp F8    &kp F9   &kp F10  &soft_off
+&kp LSHIFT   &trans         &trans         &trans    &trans        &trans          &kp F11    &kp F12  &kp F13   &kp F14  &kp F15  &kp RSHFT
+                                           &kp LGUI  &trans        &kp SPACE       &kp ENTER  &trans   &kp RALT
             >;
         };
 
@@ -60,15 +60,6 @@
 &kp LCTRL    &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOLUME_UP    &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE
 &kp LSHFT    &kp C_BRIGHTNESS_DEC  &trans          &trans            &trans      &kp C_VOL_DN       &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE       &kp TILDE
                                                    &kp LGUI          &trans      &kp SPACE          &kp RET         &trans     &kp RALT
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&soft_off  &trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans         &trans         &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans         &trans         &trans    &trans  &trans  &trans
             >;
         };
     };
